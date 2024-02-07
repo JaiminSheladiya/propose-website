@@ -1,0 +1,130 @@
+html,body{
+  margin:0px;
+  height:100%;
+
+  /* overflow: hidden; */
+}
+.bg_heart{
+  position:relative;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+ overflow:hidden;
+  background-image:url("https://i.pinimg.com/originals/a0/90/0f/a0900fd2e230b2cd3d7543629e198ca6.jpg");
+  filter: brightness(55%);
+  background-size:100% 100%;
+  z-index:-1;
+}
+
+.container{
+  position:absolute;
+  top:0;
+  left:2%;
+  right : 2%;
+  height:100%vh;
+  width:95%;
+  text-align:center;
+  color:rgb(255, 255, 255);
+  font-size:3rem;
+  padding-top: 30%;
+  /* border : 2px solid red; */
+  font-family:cursive;
+  /* text-shadow: 1px 2px 2px rgba(128, 128, 128, 1); */
+  text-shadow: 2px 3px 2px rgba(128, 128, 128, 1);
+}
+
+
+.heart{
+  position:absolute;
+  top:-50%;
+  transform:rotate(-45deg);
+  -webkit-transform:rotate(-45deg);
+  -moz-transform:rotate(-45deg);
+  -m-transform:rotate(-45deg);
+}
+.heart:before{
+  position:absolute;
+  top:-50%;
+  left:0;
+  display:block;
+  content:"";
+  width:100%;
+  height:100%;
+  background:inherit;
+  border-radius:100%;
+}
+.heart:after{
+  position:absolute;
+  top:0;
+  right:-50%;
+  display:block;
+  content:"";
+  width:100%;
+  height:100%;
+  background:inherit;
+  border-radius:100%;
+}
+
+@keyframes love {
+  0%{top:110%}
+}
+@-webkit-keyframes love {
+  0%{top:110%}
+}
+@-moz-keyframes love {
+  0%{top:110%}
+}
+@-ms-keyframes love {
+  0%{top:110%}
+}
+.body{
+  position : relative;
+  /* border : 2px solid purple; */
+height : 100vh;
+width: 100%;  
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-2px) rotateX(2deg); }
+  50% { transform: translateX(2px) rotateX(-2deg); }
+  75% { transform: translateX(-2px) rotateX(2deg); }
+  100% { transform: translateX(0); }
+}
+
+.propose-img-container {
+  position: absolute;
+  display: none;
+  bottom: -100%; /* Start position (hidden) */
+  left: 0;
+  right: 0;
+  width: 100%;
+  transition: bottom 2s ease; /* Transition property with 2-second duration */
+}
+
+
+.propose-img-container.show {
+  bottom: 0; /* End position (fully visible) */
+  animation: shake 0.5s infinite;
+  display: initial;
+
+}
+.propose-img-container > img {
+  width: 100%;
+}
+
+#playButton{
+  display: none;
+  font-size: 4rem;
+  font-family: cursive;
+  font-weight: 900;
+  margin-top : 50%;
+  padding : 1rem 4rem;
+  background: rgba(248, 248, 255, 0.393);
+  border : 1px solid black;
+  text-shadow: 2px 3px 2px rgba(128, 128, 128, 1);
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 1rem;
+  color: #000;
+}
